@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useState } from 'react';
 import Addform from './components/Addform';
 import Habits from './components/Habits';
@@ -7,7 +7,6 @@ import Navbar from './components/Navbar';
 import Reset from './components/Reset';
 
 export default function App() {
-  const [totalCount, setTotalCount] = useState(0);
   const [habits, setHabits] = useState([
     { name: '달리기', count: 0 },
     { name: '독서', count: 0 },
@@ -30,7 +29,6 @@ export default function App() {
         return [
           ...habits,
           {
-            // id: 'habit_' + habitName,
             name: habitName,
             count: 0,
           },
